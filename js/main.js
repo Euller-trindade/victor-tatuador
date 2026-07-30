@@ -229,7 +229,7 @@ BOTÃO WHATSAPP
 
 const whatsapp = document.createElement("a");
 
-whatsapp.href="https://wa.me/5500000000000";
+whatsapp.href="https://wa.me/+5575998685787";
 
 whatsapp.target="_blank";
 
@@ -283,7 +283,7 @@ ANO AUTOMÁTICO NO FOOTER
 
 const footer=document.querySelector("footer p");
 
-footer.innerHTML=`© ${new Date().getFullYear()} Viteras Tattoo - Todos os direitos reservados.`;
+footer.innerHTML=`© ${new Date().getFullYear()} Vitera sp Tattoo - Todos os direitos reservados.`;
 
 /* ============================
 SCROLL SUAVE
