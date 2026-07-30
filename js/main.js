@@ -229,7 +229,7 @@ BOTÃO WHATSAPP
 
 const whatsapp = document.createElement("a");
 
-whatsapp.href="https://wa.me/+5575998685787";
+whatsapp.href="https://wa.me/5575998685787";
 
 whatsapp.target="_blank";
 

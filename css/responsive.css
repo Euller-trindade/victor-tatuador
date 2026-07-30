@@ -135,7 +135,9 @@ nav{
     z-index:1001;
 
 }
-
+.loader-logo{
+    text-align: center;
+}
 nav{
 
     position:fixed;
@@ -350,7 +352,7 @@ footer{
 }
 
 .loader-logo{
-
+    
     font-size:42px;
 
     letter-spacing:6px;
