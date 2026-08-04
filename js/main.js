@@ -265,17 +265,32 @@ galleryItems.forEach(item=>{
 FORMULÁRIO
 ============================ */
 
-const form=document.querySelector("form");
+document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.getElementById("form-tatuagem");
 
-form.addEventListener("submit",(e)=>{
+  formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    e.preventDefault();
+    const nome = document.getElementById("nome").value.trim();
+    const telefone = document.getElementById("telefone").value.trim();
+    const instagram = document.getElementById("instagram").value.trim();
+    const descricao = document.getElementById("descricao").value.trim();
 
-    alert("Mensagem enviada com sucesso!");
+    const mensagem = `Olá! Gostaria de solicitar um orçamento de uma tatuagem.
 
-    form.reset();
+ ${descricao}`;
 
+    console.log({ nome, telefone, instagram, descricao });
+    console.log(mensagem);
+
+    const numeroWhatsapp = "555575998778582";
+    const link = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(link, "_blank");
+  });
 });
+
+  555575998778582
 
 /* ============================
 ANO AUTOMÁTICO NO FOOTER
@@ -310,3 +325,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
     });
 
 });
+
