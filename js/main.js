@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
 
         loader.style.visibility = "hidden";
 
-    },1200);
+    },500);
 
 });
 
