@@ -153,17 +153,7 @@ HEADER
 ============================ */
 
 header{
-
-backdrop-filter:blur(0px);
-
 transition:.4s;
-
-}
-
-header.active{
-
-backdrop-filter:blur(15px);
-
 }
 
 /* ============================
