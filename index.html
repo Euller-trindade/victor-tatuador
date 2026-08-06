@@ -20,8 +20,12 @@ rel="preload"
 as="style"
 href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Cinzel:wght@700&display=swap"
 onload="this.onload=null;this.rel='stylesheet'">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link
+rel="preload"
+as="style"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"></noscript>
 
 </head>
 
@@ -68,7 +72,7 @@ VITERA
 
 <section class="hero" id="home">
 
-<video autoplay muted loop playsinline>
+<video autoplay muted loop playsinline preload="metadata">
 
 <source src="assets/videos/intro4.mp4" type="video/mp4">
 
@@ -185,37 +189,37 @@ Lettering e Realismo.
 
 <div class="item tall">
 
-<img src="assets/images/tato3.jpg" >
+<img src="assets/images/tato3.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
 <div class="item">
 
-<img src="assets/images/tato2.jpg" >
+<img src="assets/images/tato2.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
 <div class="item">
 
-<img src="assets/images/tato1.jpg" >
+<img src="assets/images/tato1.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
 <div class="item wide">
 
-<img src="assets/images/tato6.jpg" >
+<img src="assets/images/tato6.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
 <div class="item">
 
-<img src="assets/images/tato4.jpg" >
+<img src="assets/images/tato4.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
 <div class="item tall">
 
-<img src="assets/images/tato5.jpg" >
+<img src="assets/images/tato5.jpg" loading="lazy" decoding="async" alt="Tatuagem realizada por Vitera SP Tattoo">
 
 </div>
 
@@ -236,15 +240,15 @@ Lettering e Realismo.
 
 <div class="videos">
 
-<video controls preload="metadata">
+<video controls preload="none" data-lazy-video>
 
-<source src="assets/videos/intro.mp4">
+<source data-src="assets/videos/intro.mp4" type="video/mp4">
 
 </video>
 
-<video controls preload="metadata">
+<video controls preload="none" data-lazy-video>
 
-<source src="assets/videos/intro2.mp4">
+<source data-src="assets/videos/intro2.mp4" type="video/mp4">
 
 </video>
 
@@ -326,7 +330,6 @@ Agendar Agora
 
 <script src="js/main.js"></script>
 <script src="js/gallery.js"></script>
-<script src="script.js"></script>
 
 </body>
 </html>

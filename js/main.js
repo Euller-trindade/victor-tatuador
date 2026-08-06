@@ -2,19 +2,40 @@
 LOADER
 ============================ */
 
-window.addEventListener("load", () => {
+const loader = document.getElementById("loader");
 
-    const loader = document.getElementById("loader");
-
-    setTimeout(() => {
-
-        loader.style.opacity = "0";
-
-        loader.style.visibility = "hidden";
-
-    },800);
-
+// O site já pode ser usado assim que o HTML for montado. Não espere imagens,
+// vídeos e arquivos externos terminarem de baixar para liberar a tela.
+requestAnimationFrame(() => {
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
 });
+
+/* ============================
+VÍDEOS FORA DA DOBRA
+============================ */
+
+const lazyVideos = document.querySelectorAll("[data-lazy-video]");
+
+const loadVideo = (video) => {
+    const source = video.querySelector("source[data-src]");
+
+    if (!source || source.src) return;
+
+    source.src = source.dataset.src;
+    video.load();
+};
+
+const videoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        loadVideo(entry.target);
+        observer.unobserve(entry.target);
+    });
+}, { rootMargin: "300px 0px" });
+
+lazyVideos.forEach((video) => videoObserver.observe(video));
 
 /* ============================
 HEADER
@@ -325,4 +346,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
     });
 
 });
-
