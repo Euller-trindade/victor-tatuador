@@ -4,12 +4,10 @@ LOADER
 
 const loader = document.getElementById("loader");
 
-// O site já pode ser usado assim que o HTML for montado. Não espere imagens,
-// vídeos e arquivos externos terminarem de baixar para liberar a tela.
-requestAnimationFrame(() => {
-    loader.style.opacity = "0";
-    loader.style.visibility = "hidden";
-});
+setTimeout(() => {
+  loader.style.opacity = "0";
+  loader.style.visibility = "hidden";
+}, 1000);
 
 /* ============================
 VÍDEOS FORA DA DOBRA
